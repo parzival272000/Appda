@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home | Appda</title>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/tooplate-style.css">
+    <link rel="stylesheet" href="./css/templatemo-style.css">
+
+    <!-- jQuery library
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
+        integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- load JS files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/jquery.singlePageNav.min.js"></script>
+
+    <script src="./js/plugins.js"></script>
+    <script src="./js/main.js"></script>
+
+</head>
+
+<body>
+    <!-- Login Modal started -->
+    <div class="container-fluid Login-modal-background">
+        <div class="row">
+            <div id="LoginModal" class="container">
+                <div class="row justify-content-end">
+                    <div class="col-1" style="height: 42px;"><span class="close" onclick=modalDisplay()>&times;</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center input-field">
+                    <div class="col-3 input-label">Email-ID: </div>
+                    <div class="col-6">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <div class="row justify-content-center input-field">
+                    <div class="col-3 input-label">Password: </div>
+                    <div class="col-6">
+                        <input class="input" type="password">
+                    </div>
+                </div>
+                <div class="row input-field">
+                    <a class="nav-link btn-outline-primary rounded-pill px-3 login-btn"
+                        href="Home.html?auth=true">Login</a>
+                </div>
+                <div class="row input-field">
+                    <div class="col-1 OR">OR</div>
+                </div>
+                <div class="row input-field">
+                    <div class="col options" style="text-align: center;">
+                        <a href="" class="option-link">Forgotten your Password ?</a>
+                    </div>
+                </div>
+                <div class="row input-field">
+                    <div class="col options" style="text-align: center;">Didn't have account? <a href=""
+                            class="option-link">Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal Ended -->
+    <div class="tm-main-content" id="top">
+        <div class="tm-top-bar-bg"></div>
+        <div class="tm-top-bar" id="tm-top-bar">
+            <!-- Top Navbar -->
+            <div class="container">
+                <div class="row">
+
+                    <nav class="navbar navbar-expand-lg narbar-light">
+                        <a class="navbar-brand mr-auto" href="#">
+                            <img src="img/logo.png" alt="Site logo">
+                            Appda
+                        </a>
+                        <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse"
+                            data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="map.html" onclick="navigate()">Airlift points</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="/asl" onclick="navigate()">ASL</a>
+                                </li>
+                                <li id="nav-script" class="nav-item">
+                                    <a class="nav-link" id="script.html" onclick="navigate()">Script</a>
+                                </li>
+                                <li id="nav-login" class="nav-item"
+                                    style="display: none; border-right: 1px solid #ccc;">
+                                    <a class="nav-link" onclick=modalDisplay()>Login</a>
+                                </li>
+                                <li id="nav-profile" class="nav-item" style="display: none;">
+                                    <a class="nav-link" onclick="navigate()">Profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="tm-section tm-bg-img" id="tm-section-1">
+        </div>
+
+        <div class="tm-section-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="tm-section-title">A web App to respond to Apda(disasters)</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tm-section tm-position-relative">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"
+                class="tm-section-down-arrow">
+                <polygon fill="#ee5057" points="0,0  100,0  50,60"></polygon>
+            </svg>
+            <div class="container tm-pt-5 tm-pb-4">
+                <div class="row text-center">
+                    <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                        <i class="fa tm-fa-6x fa-plane tm-color-primary tm-margin-b-20"></i>
+                        <h3 class="tm-color-primary tm-article-title-1">Quick evacuation</h3>
+                        <p>Finding nearby air evacuation points using machine learning.</p>
+                    </article>
+                    <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                        <i class="fas fa-bar-chart fa tm-fa-6x fa-chart-bar tm-color-primary tm-margin-b-20"></i>
+                        <h3 class="tm-color-primary tm-article-title-1">Damage analysis</h3>
+                        <p>Damage analysis for authorities using Sagemaker.</p>
+                    </article>
+                    <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                        <i class="fas fa-sign-language fa tm-fa-6x fa-life-saver tm-color-primary tm-margin-b-20"></i>
+                        <h3 class="tm-color-primary tm-article-title-1">ASL support</h3>
+                        <p>ASL for hearing impaired.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <section id="portfolio">
+            <div class="content-wrapper">
+                <div class="inner-container container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="section-heading">
+                                <h4>Safety Guidelines</h4>
+                                <div class="line-dec"></div>
+                                <p>Here are some common steps to follow in case of some moderate disasters and their
+                                    response if threat is mild</p>
+                                <div class="filter-categories">
+                                    <ul class="project-filter">
+                                        <li class="filter" data-filter="all"><span>All</span></li>
+                                        <li class="filter" data-filter="branding"><span>Blizzard</span></li>
+                                        <li class="filter" data-filter="nature"><span>Earthquake</span></li>
+                                        <li class="filter" data-filter="animation"><span>Forest Fire</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="projects-holder-3">
+                                <div class="projects-holder">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 project-item mix nature">
+                                            <div class="thumb">
+                                                <div class="image">
+                                                    <a href="#" data-lightbox="image-1"><img
+                                                            src="https://www.earthquakeauthority.com/EQA2/media/Image/Earthquake-Risk/Seven-Steps-Video-1.jpg?ext=.jpg"
+                                                            width="350" height="250"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 project-item mix animation">
+                                            <div class="thumb">
+                                                <div class="image">
+                                                    <a href="img/portfolio_big_item_02.jpg" data-lightbox="image-1"><img
+                                                            src="https://treesource.org/wp-content/uploads/2018/07/Tahoe-Hotshot-burn-operation-Ferguson-fire-1024x683.jpg"
+                                                            width="350" height="250"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 project-item mix branding">
+                                            <div class="thumb">
+                                                <div class="image">
+                                                    <a href="img/portfolio_big_item_03.jpg" data-lightbox="image-1"><img
+                                                            src="https://cdn.abcotvs.com/dip/images/1798318_031317-wabc-shutterstock-blizzard-generic-img.jpg"
+                                                            width="350" height="250"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 project-item mix graphic nature">
+                                            <div class="thumb">
+                                                <div class="image">
+                                                    <a href="img/portfolio_big_item_04.jpg" data-lightbox="image-1"><img
+                                                            src="https://athomesandiego.com/wp-content/uploads/2019/07/7-Steps-Earthquake-Safety.jpg"
+                                                            width="350" height="250"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 project-item mix branding">
+                                            <div class="thumb">
+                                                <div class="image">
+                                                    <a href="img/portfolio_big_item_05.jpg" data-lightbox="image-1"><img
+                                                            src="https://media.trekmedics.org/wp-content/uploads/2010/05/can_coverage-map-holder-database-1.png"
+                                                            width="350" height="250"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 project-item mix graphic animation">
+                                            <div class="thumb">
+                                                <div class="image">
+                                                    <a href="img/portfolio_big_item_06.jpg" data-lightbox="image-1"><img
+                                                            src="https://mocomi.com/wp-content/uploads/2016/09/MOC_GIFO_FORESTFIRES.gif_06.gif"
+                                                            width="350" height="250"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tm-section tm-section-pad tm-bg-img tm-position-relative" id="tm-section-6">
+            <div class="container ie-h-align-center-fix">
+                <div class="row content-justify-center">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-6 mt-md-0">
+                        <div class="tm-bg-white tm-p-4">
+                            <form action="index.html" method="post" class="contact-form">
+                                <div class="form-group">
+                                    <input type="text" id="contact_name" name="contact_name" class="form-control"
+                                        placeholder="Name" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="contact_email" name="contact_email" class="form-control"
+                                        placeholder="Email" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="contact_subject" name="contact_subject" class="form-control"
+                                        placeholder="Subject" required />
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="contact_message" name="contact_message" class="form-control" rows="9"
+                                        placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary tm-btn-primary">Send Message Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="tm-bg-dark-blue">
+            <div class="container">
+                <div class="row">
+                    <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
+                        Copyright &copy; <span class="tm-current-year">2023</span> Appda</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/custom_nav.js"></script>
+</body>
+
+</html>

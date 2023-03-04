@@ -1,0 +1,8 @@
+__pycache__
+temp
+.vscode
+.DS_Store
+
+node_modules
+uploads
+audio

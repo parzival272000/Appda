@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/tooplate-style.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+
+  <title>Helipads Near Me | Appda</title>
+
+  <!-- jQuery library
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+Latest compiled JavaScript -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
+    integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- load JS files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script src="./js/jquery.singlePageNav.min.js"></script>
+
+  <script src="./js/plugins.js"></script>
+  <script src="./js/main.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+
+    button {
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Login Modal started -->
+  <div class="container-fluid Login-modal-background">
+    <div class="row">
+        <div id="LoginModal" class="container">
+            <div class="row justify-content-end">
+                <div class="col-1" style="height: 42px;"><span class="close" onclick=modalDisplay()>&times;</span></div>
+            </div>
+            <div class="row justify-content-center input-field">
+                <div class="col-3 input-label">Email-ID: </div>
+                <div class="col-6">
+                    <input class="input" type="text">
+                </div>
+            </div>
+            <div class="row justify-content-center input-field">
+                <div class="col-3 input-label">Password: </div>
+                <div class="col-6">
+                    <input class="input" type="text">
+                </div>
+            </div>
+            <div class="row input-field">
+                <a class="nav-link btn-outline-primary rounded-pill px-3 login-btn" href="Home.html?auth=true" >Login</a>
+            </div>
+            <div class="row input-field">
+                <div class="col-1 OR">OR</div>
+            </div>
+            <div class="row input-field">
+                <div class="col options" style="text-align: center;">
+                    <a href="" class="option-link">Forgotten your Password ?</a>
+                </div>
+            </div>
+            <div class="row input-field">
+                <div class="col options" style="text-align: center;">Didn't have account? <a href="" class="option-link">Sign Up</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login Modal Ended -->
+  <div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>
+    <div class="tm-top-bar" id="tm-top-bar">
+      <!-- Top Navbar -->
+      <div class="container">
+        <div class="row">
+
+          <nav class="navbar navbar-expand-lg narbar-light">
+            <a class="navbar-brand mr-auto" href="#">
+              <img src="img/logo.png" alt="Site logo">
+              Appda
+            </a>
+            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse"
+              data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link index.html Home.html" onclick="setUrl()">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Airlift points</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id = "/asl" onclick="navigate()">ASL</a>
+                </li>
+                <li id = "nav-script" class="nav-item">
+                  <a class="nav-link" id = "script.html" onclick="navigate()">Script</a>
+              </li>
+                <li id="nav-login" class="nav-item" style="display: none; border-right: 1px solid #ccc;">
+                    <a class="nav-link" onclick=modalDisplay()>Login</a>
+                </li>
+                <li id="nav-profile" class="nav-item" style="display: none;">
+                    <a class="nav-link" onclick="navigate()">Profile</a>
+                </li>
+            </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <h1>Airlift Points</h1> -->
+  <div id="map">
+  </div>
+
+  <div class="container my-3 bg-light">
+    <div class="col-md-12 text-center">
+      <button id="getUserLocation" type="button" class="btn btn-primary">Get my location</button>
+      <button id="getNearestHelipad" type="button" class="btn btn-success">Find nearest helipad</button>
+    </div>
+  </div>
+  <footer class="tm-bg-dark-blue">
+    <div class="container">
+      <div class="row">
+        <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
+          Copyright &copy; <span class="tm-current-year">2023</span> Appda</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <script src="script.js"></script>
+  <script src="./js/custom_nav.js"></script>
+</body>
+
+</html>

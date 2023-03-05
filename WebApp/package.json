@@ -10,15 +10,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/parzival272000/ProjectX.git"
+        "url": "git+https://github.com/parzival272000/Appda.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/parzival272000/ProjectX/issues"
+        "url": "https://github.com/parzival272000/Appda/issues"
     },
-    "homepage": "https://github.com/parzival272000/ProjectX#readme",
+    "homepage": "https://github.com/parzival272000/Appda#readme",
     "dependencies": {
         "ejs": "^3.1.6",
         "express": "^4.17.1",
